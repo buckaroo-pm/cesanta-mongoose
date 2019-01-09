@@ -1,3 +1,5 @@
+load('//:buckaroo_macros.bzl', 'buckaroo_deps')
+
 cxx_library(
   name = 'mongoose',
   header_namespace = '',
@@ -9,6 +11,9 @@ cxx_library(
   ],
   licenses = [
     'LICENSE',
+  ],
+  platform_deps = [
+    ('linux.*', buckaroo_deps()),
   ],
   visibility = [
     'PUBLIC'
