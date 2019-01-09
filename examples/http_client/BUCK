@@ -1,0 +1,9 @@
+cxx_binary(
+  name = 'http_client',
+  srcs = [
+    'http_client.c',
+  ],
+  deps = [
+    '//:mongoose',
+  ],
+)
